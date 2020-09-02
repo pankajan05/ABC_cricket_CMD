@@ -2,13 +2,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Register {
-    private Team[] teams = new Team[10];
+    private Team[] teams;
     private Scanner input = new Scanner(System.in);
 
-    public Register() {
+    public Register(Team[] teams) {
+        this.teams = teams;
     }
 
-    public void start() {
+    public Team[] register() {
         for(int x = 0; x < 10; x++) {
             System.out.print("Enter team "+ (x+1) +" Team name : ");
             teams[x] = new Team(input.nextLine());
@@ -37,12 +38,11 @@ public class Register {
             teams[x].setPlayers(register_players);
         }
 
+        return this.teams;
+
     }
 
 
-    public Team[] getTeams() {
-        return teams;
-    }
 
     @Override
     public String toString() {

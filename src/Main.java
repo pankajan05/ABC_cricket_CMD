@@ -18,7 +18,9 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        Register register = new Register();
-        register.start();
+        ABC_Manager manager = new ABC_Manager();
+        manager.manage();
+
+
     }
 }
