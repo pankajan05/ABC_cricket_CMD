@@ -4,11 +4,10 @@ public class Player {
     private int age;
     private String role;
 
-    private int runs;
-    private int Boundaries;
-    private float Strike_rate;
-    private String incident;
-    
+    private int playmatch = 0;
+    private ScoreCard[] scoreCards = new ScoreCard[4];
+
+
 
 
     public Player() {
@@ -52,6 +51,19 @@ public class Player {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public ScoreCard[] getScoreCards() {
+        return scoreCards;
+    }
+
+    public void addScoreCards(ScoreCard scoreCard) {
+        this.scoreCards[playmatch] = scoreCard;
+        playmatch++;
+    }
+
+    public int getPlaymatch() {
+        return playmatch;
     }
 
     @Override
