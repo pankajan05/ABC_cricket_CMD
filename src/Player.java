@@ -4,6 +4,13 @@ public class Player {
     private int age;
     private String role;
 
+    private int runs;
+    private int Boundaries;
+    private float Strike_rate;
+    private String incident;
+    
+
+
     public Player() {
     }
 
