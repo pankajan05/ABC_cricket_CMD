@@ -10,12 +10,12 @@ public class Register {
     }
 
     public Team[] register() {
-        for(int x = 0; x < 10; x++) {
-            System.out.print("Enter team "+ (x+1) +" Team name : ");
-            teams[x] = new Team(input.nextLine());
+        for(int team_no = 0; team_no < 10; team_no++) {
+            System.out.print("Enter team "+ (team_no+1) +" Team name : ");
+            teams[team_no] = new Team(input.nextLine());
             Player[] register_players = new Player[11];
 
-            for(int y = 0; y < 11; y++) {
+            for(int player_no = 0; player_no < 11; player_no++) {
                 Player player = new Player();
 
                 System.out.print("Enter player id : ");
@@ -32,10 +32,10 @@ public class Register {
                 input.nextLine();                           //remove the escape character from previous input
                 player.setRole(input.nextLine());
 
-                register_players[y] = player;
+                register_players[player_no] = player;
             }
 
-            teams[x].setPlayers(register_players);
+            teams[team_no].setPlayers(register_players);
         }
 
         return this.teams;

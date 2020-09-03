@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class Team {
+public class Team implements Serializable {
     private String Team_name;
     Player[] players = new Player[11];
 

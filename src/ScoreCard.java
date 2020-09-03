@@ -1,4 +1,6 @@
-public class ScoreCard {
+import java.io.Serializable;
+
+public class ScoreCard implements Serializable {
     private String venue;
     private int runs;
     private int Boundaries;
