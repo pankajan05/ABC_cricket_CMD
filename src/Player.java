@@ -5,7 +5,7 @@ public class Player {
     private String role;
 
     private int playmatch = 0;
-    private ScoreCard[] scoreCards = new ScoreCard[4];
+            private ScoreCard[] scoreCards = new ScoreCard[4];
 
 
 

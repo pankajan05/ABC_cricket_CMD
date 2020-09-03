@@ -9,5 +9,6 @@ public class ABC_Manager {
         this.teams = register.register();
 
         ScoreBoard scoreBoard = new ScoreBoard(this.teams);
+        scoreBoard.countScore();
     }
 }
