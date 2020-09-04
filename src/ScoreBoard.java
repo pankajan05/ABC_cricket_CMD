@@ -58,7 +58,7 @@ public class ScoreBoard {
             }
 
             for(int card_no = 0; card_no < teams[teamNo].players[count].scoreCards.length; card_no++){
-               
+
                 if(teams[teamNo].players[selected_player].scoreCards[card_no] == null){
                     teams[teamNo].players[selected_player].scoreCards[card_no] = new ScoreCard();
                     teams[teamNo].players[selected_player].scoreCards[card_no].setVenue(venue);
@@ -74,7 +74,7 @@ public class ScoreBoard {
 
                     teams[teamNo].players[selected_player].scoreCards[card_no].setBlank(false);
 
-                    System.out.print(teams[teamNo].players[selected_player]);
+                    System.out.println(teams[teamNo].players[selected_player]);
                     break;
                 } else {
                     continue;
