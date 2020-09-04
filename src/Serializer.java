@@ -7,12 +7,12 @@ public class Serializer {
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
             int x= 0;
-            while( x < 10) {
+            while( x < 2) {
                 out.writeObject(team[x]);
                 x++;
             }
 
-            System.out.printf("Serialized data is saved in team.ser");
+            System.out.printf("Serialized data is saved in team.ser\n\n");
             out.close();
             fileOut.close();
 

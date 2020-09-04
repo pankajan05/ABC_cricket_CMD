@@ -1,6 +1,7 @@
 import java.io.Serializable;
 
 public class ScoreCard implements Serializable {
+    private boolean Blank = true;
     private String venue;
     private int runs;
     private int Boundaries;
@@ -48,6 +49,14 @@ public class ScoreCard implements Serializable {
 
     public void setIncident(String incident) {
         this.incident = incident;
+    }
+
+    public boolean isBlank() {
+        return Blank;
+    }
+
+    public void setBlank(boolean blank) {
+        Blank = blank;
     }
 
     @Override
