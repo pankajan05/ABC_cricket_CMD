@@ -9,12 +9,14 @@ public class ABC_Manager {
         //Register register = new Register(this.teams);
         //this.teams = register.register();
 
+
         //serializer.serialization(teams);
         this.teams = serializer.deserialization();
-
-
         System.out.println(teams[0]);
         ScoreBoard scoreBoard = new ScoreBoard(this.teams);
         scoreBoard.countScore();
+
+
+
     }
 }

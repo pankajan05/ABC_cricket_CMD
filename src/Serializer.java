@@ -12,7 +12,7 @@ public class Serializer {
                 x++;
             }
 
-            System.out.printf("Serialized data is saved in team.ser");
+            System.out.printf("Serialized data is saved in team.ser\n\n");
             out.close();
             fileOut.close();
 
