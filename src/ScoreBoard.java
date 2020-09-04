@@ -5,29 +5,13 @@ public class ScoreBoard {
     private String venue;
     private int team1;
     private int team2;
+    private int team1_runs = 0;
+    private int team2_runs = 0;
     private Scanner input = new Scanner(System.in);
 
     public ScoreBoard(Team[] teams) {
         this.teams = teams;
     }
-
-    public void selectTeam(){
-        System.out.println("please select 2 teams that play the match "+ venue +": ");
-        for(int x = 0; x < 2; x++){
-            System.out.println(x + " : " + teams[x].getTeam_name());
-        }
-        System.out.print("Enter 1st play team no : ");
-        team1 = input.nextInt();
-        System.out.print("Enter 2nd team no : ");
-        team2 = input.nextInt();
-
-    }
-
-    public void select_venue(){
-        System.out.print("Enter the venue : ");
-        venue = input.nextLine();
-    }
-
 
     public void countScore() {
         this.select_venue();
@@ -37,6 +21,32 @@ public class ScoreBoard {
         System.out.println("It is start to count the score of team1.\n\n");
         this.record(team1);
         this.record(team2);
+
+        this.calculate_winner();
+    }
+
+    public void selectTeam(){
+        System.out.println("please select 2 teams that play the match "+ venue +": ");
+        for(int x = 0; x < 2; x++){
+            System.out.println(x + " : " + teams[x].getTeam_name());
+        }
+        System.out.print("Enter 1st play team ");
+        do {
+            System.out.print("correct no ? : ");
+            team1 = input.nextInt();
+        }while (team1 < 0 || team1 > 9);
+
+        System.out.print("Enter 2nd team ");
+        do {
+            System.out.print("correct no ? : ");
+            team2 = input.nextInt();
+        }while (team2 < 0 || team2 > 9);
+
+    }
+
+    public void select_venue(){
+        System.out.print("Enter the venue : ");
+        venue = input.nextLine();
     }
 
     public void printPlayer(int teamNo) {
@@ -60,10 +70,18 @@ public class ScoreBoard {
             for(int card_no = 0; card_no < teams[teamNo].players[count].scoreCards.length; card_no++){
 
                 if(teams[teamNo].players[selected_player].scoreCards[card_no] == null){
+
                     teams[teamNo].players[selected_player].scoreCards[card_no] = new ScoreCard();
                     teams[teamNo].players[selected_player].scoreCards[card_no].setVenue(venue);
                     System.out.print("Enter the runs : ");
-                    teams[teamNo].players[selected_player].scoreCards[card_no].setRuns(input.nextInt());
+                    int runs = input.nextInt();
+                    if(teamNo == team1){
+                        team1_runs += runs;
+                    }else {
+                        team2_runs += runs;
+                    }
+
+                    teams[teamNo].players[selected_player].scoreCards[card_no].setRuns(runs);
                     System.out.print("Enter the boundaries : ");
                     teams[teamNo].players[selected_player].scoreCards[card_no].setBoundaries(input.nextInt());
                     System.out.print("Enter the strike rate : ");
@@ -74,7 +92,6 @@ public class ScoreBoard {
 
                     teams[teamNo].players[selected_player].scoreCards[card_no].setBlank(false);
 
-                    System.out.println(teams[teamNo].players[selected_player]);
                     break;
                 } else {
                     continue;
@@ -82,4 +99,17 @@ public class ScoreBoard {
             }
         }
     }
+
+
+    private void calculate_winner() {
+        if(team1_runs > team2_runs) {
+            System.out.println(teams[team1].getTeam_name() + " won the match by " + (team1_runs - team2_runs) + " runs.\n\n");
+        }else if(team1_runs == team2_runs) {
+            System.out.println("This match is draw.\n\n");
+        }else {
+                System.out.println(teams[team2].getTeam_name() + " won the match by " + (team2_runs - team1_runs) + " runs.\n\n");
+        }
+
+    }
+
 }
