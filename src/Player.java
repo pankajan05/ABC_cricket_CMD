@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.util.Arrays;
 
 public class Player implements Serializable {
     private int player_id;
@@ -7,7 +8,7 @@ public class Player implements Serializable {
     private String role;
 
     private int playmatch = 0;
-            private ScoreCard[] scoreCards = new ScoreCard[4];
+    ScoreCard[] scoreCards = new ScoreCard[4];
 
 
 
@@ -75,6 +76,8 @@ public class Player implements Serializable {
                 ", player_name='" + player_name + '\'' +
                 ", age=" + age +
                 ", role='" + role + '\'' +
+                ", playmatch=" + playmatch +
+                ", scoreCards=" + Arrays.toString(scoreCards) +
                 '}';
     }
 }

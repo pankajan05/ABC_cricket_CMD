@@ -10,12 +10,12 @@ public class Register {
     }
 
     public Team[] register() {
-        for(int team_no = 0; team_no < 10; team_no++) {
+        for(int team_no = 0; team_no < 2; team_no++) {
             System.out.print("Enter team "+ (team_no+1) +" Team name : ");
             teams[team_no] = new Team(input.nextLine());
             Player[] register_players = new Player[11];
 
-            for(int player_no = 0; player_no < 11; player_no++) {
+            for(int player_no = 0; player_no < 2; player_no++) {
                 Player player = new Player();
 
                 System.out.print("Enter player id : ");
