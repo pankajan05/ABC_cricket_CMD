@@ -37,6 +37,8 @@ public class ScoreBoard {
         }while (team1 < 0 || team1 > 9);
 
         System.out.print("Enter 2nd team ");
+
+        //validate the input
         do {
             System.out.print("correct no ? : ");
             team2 = input.nextInt();
@@ -57,24 +59,35 @@ public class ScoreBoard {
 
     private void record(int teamNo) {
         int selected_player;
-        System.out.println("Select the player no");
+        System.out.println("Enter -1 when team finish playing.\n Select the player no");
+
         for(int count = 0; count < 2; count++){
             this.printPlayer(teamNo);
-            System.out.print("Enter the selected player : ");
-            selected_player = input.nextInt();
+            System.out.print("Enter the selected ");
+
+            //validate the input
+            do{
+                System.out.print("correct player no? : ");
+                selected_player = input.nextInt();
+            }while (selected_player < -1 || selected_player > 11);
 
             if(selected_player == -1){
                 break;
             }
 
             for(int card_no = 0; card_no < teams[teamNo].players[count].scoreCards.length; card_no++){
-
                 if(teams[teamNo].players[selected_player].scoreCards[card_no] == null){
 
                     teams[teamNo].players[selected_player].scoreCards[card_no] = new ScoreCard();
                     teams[teamNo].players[selected_player].scoreCards[card_no].setVenue(venue);
-                    System.out.print("Enter the runs : ");
-                    int runs = input.nextInt();
+                    System.out.print("Enter the ");
+                    int runs;
+                    //validate the input
+                    do {
+                        System.out.print("correct runs : ");
+                        runs = input.nextInt();
+                    } while (runs < 0);
+
                     if(teamNo == team1){
                         team1_runs += runs;
                     }else {
@@ -82,12 +95,29 @@ public class ScoreBoard {
                     }
 
                     teams[teamNo].players[selected_player].scoreCards[card_no].setRuns(runs);
-                    System.out.print("Enter the boundaries : ");
-                    teams[teamNo].players[selected_player].scoreCards[card_no].setBoundaries(input.nextInt());
-                    System.out.print("Enter the strike rate : ");
-                    teams[teamNo].players[selected_player].scoreCards[card_no].setStrike_rate(input.nextFloat());
+                    System.out.print("Enter the ");
+                    int boundaries;
+                    //validate the input
+                    do {
+                        System.out.print("correct boundaries : ");
+                        boundaries = input.nextInt();
+                    } while (boundaries < 0);
+                    teams[teamNo].players[selected_player].scoreCards[card_no].setBoundaries(boundaries);
+
+
+
+                    System.out.print("Enter the ");
+                    float strike;
+                    //validate the input
+                    do {
+                        System.out.print("correct strike rate : ");
+                        strike = input.nextFloat();
+                    } while (strike < 0.0);
+                    teams[teamNo].players[selected_player].scoreCards[card_no].setStrike_rate(strike);
+
+
                     System.out.print("Enter the incidents : ");
-                    input.nextLine();
+                    input.next(); //remove the enter
                     teams[teamNo].players[selected_player].scoreCards[card_no].setIncident(input.nextLine());
 
                     teams[teamNo].players[selected_player].scoreCards[card_no].setBlank(false);
