@@ -21,15 +21,15 @@ public class Serializer {
         }
     }
 
-    public void deserialization() {
-        Team[] team = new Team[10];
+    public Team[] deserialization() {
+        Team[] teams = new Team[2];
         try {
             FileInputStream fileIn = new FileInputStream("D:\\Java\\ABC_cricket_CMD\\team.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
 
             int x= 0;
-            while( x < 10) {
-                team[x] = (Team) in.readObject();
+            while( x < 2) {
+                teams[x] = (Team) in.readObject();
                 x++;
             }
 
@@ -39,9 +39,10 @@ public class Serializer {
         } catch (IOException i) {
             i.printStackTrace();
         } catch (ClassNotFoundException c) {
-            System.out.println("Student class not found");
+            System.out.println("Team class not found");
             c.printStackTrace();
 
         }
+        return teams;
     }
 }
