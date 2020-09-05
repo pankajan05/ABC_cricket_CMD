@@ -1,3 +1,5 @@
+package ABC_Manager;
+
 import java.util.Scanner;
 
 public class ScoreBoard {

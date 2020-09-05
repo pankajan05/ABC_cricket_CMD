@@ -1,9 +1,11 @@
+package ABC_Manager;
+
 import java.io.Serializable;
 import java.util.Arrays;
 
 public class Team implements Serializable {
     private String Team_name;
-    Player[] players = new Player[11];
+    public Player[] players = new Player[11];
 
     public Team(String team_name) {
         Team_name = team_name;
@@ -27,7 +29,7 @@ public class Team implements Serializable {
 
     @Override
     public String toString() {
-        return "Team{" +
+        return "ABC_Manager.Team{" +
                 "Team_name='" + Team_name + '\'' +
                 ", players=" + Arrays.toString(players) +
                 '}';

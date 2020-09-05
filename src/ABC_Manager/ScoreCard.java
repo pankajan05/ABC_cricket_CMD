@@ -1,3 +1,5 @@
+package ABC_Manager;
+
 import java.io.Serializable;
 
 public class ScoreCard implements Serializable {
@@ -61,7 +63,7 @@ public class ScoreCard implements Serializable {
 
     @Override
     public String toString() {
-        return "ScoreCard{" +
+        return "ABC_Manager.ScoreCard{" +
                 "venue='" + venue + '\'' +
                 ", runs=" + runs +
                 ", Boundaries=" + Boundaries +

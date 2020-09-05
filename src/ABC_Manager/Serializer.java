@@ -1,3 +1,5 @@
+package ABC_Manager;
+
 import java.io.*;
 
 public class Serializer {
@@ -39,7 +41,7 @@ public class Serializer {
         } catch (IOException i) {
             i.printStackTrace();
         } catch (ClassNotFoundException c) {
-            System.out.println("Team class not found");
+            System.out.println("ABC_Manager.Team class not found");
             c.printStackTrace();
 
         }

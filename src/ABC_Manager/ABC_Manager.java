@@ -1,4 +1,6 @@
-import calculator.Calculator;
+package ABC_Manager;
+
+import ABC_Manager.calculator.Calculator;
 
 public class ABC_Manager {
     private Team[] teams = new Team[10];
@@ -8,7 +10,7 @@ public class ABC_Manager {
     }
 
     public void manage() {
-        //Register register = new Register(this.teams);
+        //ABC_Manager.Register register = new ABC_Manager.Register(this.teams);
         //this.teams = register.register();
 
         ScoreBoard scoreBoard = new ScoreBoard(this.teams);
