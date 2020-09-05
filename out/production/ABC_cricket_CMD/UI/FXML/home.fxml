@@ -20,10 +20,10 @@
                   <Font size="9.0" />
                </font>
             </Label>
-            <Button layoutX="57.0" layoutY="192.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="View Team" />
-            <Button layoutX="57.0" layoutY="262.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="View Player" />
-            <Button layoutX="57.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="View Result" />
-            <Button layoutX="46.0" layoutY="406.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="View Match Info" />
+            <Button fx:id="viewTeam" layoutX="46.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#viewTeam" prefHeight="25.0" prefWidth="111.0" text="View Team" />
+            <Button fx:id="viewPlayer" layoutX="46.0" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#viewPlayer" prefHeight="25.0" prefWidth="111.0" text="View Player" />
+            <Button fx:id="viewResult" layoutX="46.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#viewResult" prefHeight="25.0" prefWidth="111.0" text="View Result" />
+            <Button fx:id="viewMatch" layoutX="46.0" layoutY="406.0" mnemonicParsing="false" onMouseClicked="#viewMatch" prefHeight="25.0" prefWidth="111.0" text="View Match Info" />
          </children>
       </Pane>
       <AnchorPane fx:id="holderPane" layoutX="205.0" prefHeight="500.0" prefWidth="595.0" />
