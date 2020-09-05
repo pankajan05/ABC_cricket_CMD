@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="500.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.ViewResult">
+<AnchorPane prefHeight="500.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.ViewResult">
    <children>
       <Label layoutX="61.0" layoutY="126.0" prefHeight="17.0" prefWidth="68.0" text="High Runs" />
       <Label layoutX="61.0" layoutY="361.0" text="High Strike" />

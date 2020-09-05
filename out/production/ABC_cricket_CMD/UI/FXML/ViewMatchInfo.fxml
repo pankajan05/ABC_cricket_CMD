@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.ViewMatchInfo">
+   <children>
+      <Label fx:id="matchInfo" layoutX="84.0" layoutY="118.0" prefHeight="251.0" prefWidth="410.0" text="Label" />
+   </children>
+</AnchorPane>
