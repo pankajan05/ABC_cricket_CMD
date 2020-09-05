@@ -16,7 +16,7 @@ public class ABC_Manager {
         //ScoreBoard scoreBoard = new ScoreBoard(this.teams);
         //this.teams = scoreBoard.countScore();
 
-        //this.teams = serializer.deserialization();
+        this.teams = serializer.deserialization();
 
         System.out.println(teams[0]);
         //serializer.serialization(teams);
