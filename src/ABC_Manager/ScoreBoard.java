@@ -1,3 +1,5 @@
+package ABC_Manager;
+
 import java.util.Scanner;
 
 public class ScoreBoard {
@@ -13,7 +15,7 @@ public class ScoreBoard {
         this.teams = teams;
     }
 
-    public void countScore() {
+    public Team[] countScore() {
         this.select_venue();
         this.selectTeam();
         System.out.println("Now playing team are "+ teams[team1].getTeam_name()+" and " + teams[team2].getTeam_name());
@@ -23,6 +25,8 @@ public class ScoreBoard {
         this.record(team2);
 
         this.calculate_winner();
+
+        return this.teams;
     }
 
     public void selectTeam(){

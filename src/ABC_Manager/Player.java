@@ -1,3 +1,5 @@
+package ABC_Manager;
+
 import java.io.Serializable;
 import java.util.Arrays;
 
@@ -8,7 +10,7 @@ public class Player implements Serializable {
     private String role;
 
     private int playmatch = 0;
-    ScoreCard[] scoreCards = new ScoreCard[4];
+    public ScoreCard[] scoreCards = new ScoreCard[4];
 
 
 
@@ -71,7 +73,7 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return "Player{" +
+        return "ABC_Manager.Player{" +
                 "player_id=" + player_id +
                 ", player_name='" + player_name + '\'' +
                 ", age=" + age +

@@ -1,3 +1,5 @@
+package ABC_Manager;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -11,7 +13,7 @@ public class Register {
 
     public Team[] register() {
         for(int team_no = 0; team_no < 2; team_no++) {
-            System.out.print("Enter team "+ (team_no+1) +" Team name : ");
+            System.out.print("Enter team "+ (team_no+1) +" ABC_Manager.Team name : ");
             teams[team_no] = new Team(input.nextLine());
             Player[] register_players = new Player[2];
 
@@ -46,7 +48,7 @@ public class Register {
 
     @Override
     public String toString() {
-        return "Register{" +
+        return "ABC_Manager.Register{" +
                 "teams=" + Arrays.toString(teams) +
                 '}';
     }
