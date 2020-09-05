@@ -1,3 +1,5 @@
+import calculator.Calculator;
+
 public class ABC_Manager {
     private Team[] teams = new Team[10];
     private Serializer serializer= new Serializer();
@@ -10,14 +12,14 @@ public class ABC_Manager {
         //this.teams = register.register();
 
         ScoreBoard scoreBoard = new ScoreBoard(this.teams);
-        scoreBoard.countScore();
+        this.teams = scoreBoard.countScore();
 
         this.teams = serializer.deserialization();
 
         System.out.println(teams[0]);
         //serializer.serialization(teams);
 
-
+        Calculator calculator;
 
 
     }
