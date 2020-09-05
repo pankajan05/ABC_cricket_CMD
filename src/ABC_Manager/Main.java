@@ -20,9 +20,9 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        ABC_Manager manager = new ABC_Manager();
-        manager.manage();
+        //ABC_Manager manager = new ABC_Manager();
+        //manager.manage();
 
-        //launch(args);
+        launch(args);
     }
 }
