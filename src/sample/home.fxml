@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+   <children>
+      <Pane prefHeight="500.0" prefWidth="205.0" style="-fx-background-color: #36394E;">
+         <children>
+            <Label layoutX="11.0" layoutY="69.0" text="ABC Cricket Tournament" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="104.0" text="Welcome to the ABC Cricket Tournament." textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Button layoutX="57.0" layoutY="192.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="View Team" />
+            <Button layoutX="57.0" layoutY="262.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="View Player" />
+            <Button layoutX="57.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="View Result" />
+            <Button layoutX="46.0" layoutY="406.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="View Match Info" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="holderPane" layoutX="205.0" prefHeight="500.0" prefWidth="595.0" />
+   </children>
+</AnchorPane>
