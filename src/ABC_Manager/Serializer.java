@@ -31,7 +31,7 @@ public class Serializer {
 
             int x= 0;
             while( x < 2) {
-                teams[x] = (Team) in.readObject();
+                teams[x] = (Team)in.readObject();
                 x++;
             }
 

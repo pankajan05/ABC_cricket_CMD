@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.ViewResult">
+   <children>
+      <Label layoutX="61.0" layoutY="126.0" prefHeight="17.0" prefWidth="68.0" text="High Runs" />
+      <Label layoutX="61.0" layoutY="361.0" text="High Strike" />
+      <Label layoutX="61.0" layoutY="249.0" text="High Boundaries" />
+      <Label fx:id="runs" layoutX="168.0" layoutY="101.0" prefHeight="68.0" prefWidth="334.0" text="Label" />
+      <Label fx:id="boundary" layoutX="176.0" layoutY="224.0" prefHeight="68.0" prefWidth="334.0" text="Label" />
+      <Label fx:id="strike" layoutX="176.0" layoutY="336.0" prefHeight="68.0" prefWidth="328.0" text="Label" />
+   </children>
+</AnchorPane>

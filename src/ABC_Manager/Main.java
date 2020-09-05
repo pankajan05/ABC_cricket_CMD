@@ -10,19 +10,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("../UI/FXML/home.fxml"));
+        primaryStage.setTitle("ABC Cricket Tournament");
+        primaryStage.setScene(new Scene(root, 800, 500));
         primaryStage.show();
 
-        //launch(args);
+
     }
 
 
     public static void main(String[] args) {
-        ABC_Manager manager = new ABC_Manager();
-        manager.manage();
+        //ABC_Manager manager = new ABC_Manager();
+        //manager.manage();
 
-
+        launch(args);
     }
 }

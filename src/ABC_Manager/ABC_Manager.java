@@ -10,11 +10,11 @@ public class ABC_Manager {
     }
 
     public void manage() {
-        //ABC_Manager.Register register = new ABC_Manager.Register(this.teams);
+        //Register register = new Register(this.teams);
         //this.teams = register.register();
 
-        ScoreBoard scoreBoard = new ScoreBoard(this.teams);
-        this.teams = scoreBoard.countScore();
+        //ScoreBoard scoreBoard = new ScoreBoard(this.teams);
+        //this.teams = scoreBoard.countScore();
 
         this.teams = serializer.deserialization();
 

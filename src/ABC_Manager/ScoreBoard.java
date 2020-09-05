@@ -51,7 +51,7 @@ public class ScoreBoard {
     }
 
     public void select_venue(){
-        System.out.print("Enter the venue : ");
+        System.out.print("\n\nEnter the venue : ");
         venue = input.nextLine();
     }
 
