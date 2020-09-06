@@ -21,7 +21,7 @@ public class ViewMatchInfo implements Initializable {
         Team[] teams = serializer.deserialization();;
 
         matchInfo += "Participated Teams : \n\n";
-        for(int counter = 0; counter < 2; counter++){
+        for(int counter = 0; counter < teams.length; counter++){
             matchInfo += teams[counter].getTeam_name() + "\n";
         }
         this.matchInfo.setText(matchInfo);

@@ -15,10 +15,10 @@ public class HighStrike_Calculator implements Calculator{
 
     @Override
     public String calculate() {
-        for(int team_counter = 0; team_counter < 2; team_counter++){
-            for(int player_counter = 0; player_counter < 2; player_counter++){
+        for(int team_counter = 0; team_counter < teams.length; team_counter++){
+            for(int player_counter = 0; player_counter < teams[team_counter].players.length; player_counter++){
                 float strike = (float) 0.0;
-                for(int score_counter = 0; score_counter < 4; score_counter++){
+                for(int score_counter = 0; score_counter < teams[team_counter].players[player_counter].scoreCards.length; score_counter++){
                     if(teams[team_counter].players[player_counter].scoreCards[score_counter] != null){
                         strike = teams[team_counter].players[player_counter].scoreCards[score_counter].getStrike_rate();
                         if(strike > high_strike){
@@ -30,6 +30,6 @@ public class HighStrike_Calculator implements Calculator{
                 }
             }
         }
-        return Float.toString(this.high_strike) + " happen - > " + this.Venue;
+        return Float.toString(this.high_strike) + " happen - > " + this.Venue + " by " + this.player.getPlayer_name();
     }
 }

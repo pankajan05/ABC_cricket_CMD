@@ -26,10 +26,10 @@ public class ViewTeam {
         String text = "No Player is found";
         this.playerNames.setText(text);
         this.teams = serializer.deserialization();
-        for(int counter = 0; counter < 2; counter++){
+        for(int counter = 0; counter < teams.length; counter++){
             if(this.teams[counter].getTeam_name().equals(id) ){
                 text = "";
-                for(int counter_p = 0; counter_p<2; counter_p++)
+                for(int counter_p = 0; counter_p< teams[counter].players.length; counter_p++)
                     text += this.teams[counter].players[counter_p].getPlayer_name() + " -> " + this.teams[counter].players[counter_p].getRole() + "\n";
                 this.playerNames.setText(text);
             }

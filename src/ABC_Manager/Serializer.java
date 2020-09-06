@@ -9,7 +9,7 @@ public class Serializer {
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
             int x= 0;
-            while( x < 2) {
+            while( x < 10) {
                 out.writeObject(team[x]);
                 x++;
             }
@@ -24,13 +24,13 @@ public class Serializer {
     }
 
     public Team[] deserialization() {
-        Team[] teams = new Team[2];
+        Team[] teams = new Team[10];
         try {
             FileInputStream fileIn = new FileInputStream("D:\\Java\\ABC_cricket_CMD\\team.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
 
             int x= 0;
-            while( x < 2) {
+            while( x < 10) {
                 teams[x] = (Team)in.readObject();
                 x++;
             }
