@@ -15,7 +15,7 @@ public class Register {
         for(int team_no = 0; team_no < teams.length; team_no++) {
             System.out.print("Enter team "+ (team_no+1) +" Team name : ");
             teams[team_no] = new Team(input.nextLine());
-            Player[] register_players = new Player[2];
+            Player[] register_players = new Player[11];
 
             for(int player_no = 0; player_no < teams[team_no].players.length; player_no++) {
                 Player player = new Player();
