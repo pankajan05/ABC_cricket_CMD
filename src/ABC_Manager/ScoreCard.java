@@ -63,12 +63,12 @@ public class ScoreCard implements Serializable {
 
     @Override
     public String toString() {
-        return "ABC_Manager.ScoreCard{" +
+        return "ScoreCard{" +
                 "venue='" + venue + '\'' +
                 ", runs=" + runs +
                 ", Boundaries=" + Boundaries +
                 ", Strike_rate=" + Strike_rate +
                 ", incident='" + incident + '\'' +
-                '}';
+                "}\n";
     }
 }

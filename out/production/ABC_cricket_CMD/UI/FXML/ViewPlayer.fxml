@@ -5,14 +5,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.ViewPlayer">
    <children>
       <Button fx:id="search" layoutX="458.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#Search" text="Search" />
       <TextField fx:id="teamId" layoutX="48.0" layoutY="48.0" />
       <TextField fx:id="playerId" layoutX="265.0" layoutY="48.0" />
-      <Label layoutX="95.0" layoutY="80.0" text="ABC_Manager.Team Id" />
+      <Label layoutX="95.0" layoutY="80.0" text="Team Id" />
       <Label layoutX="318.0" layoutY="80.0" text="PlayerId" />
-      <Label layoutX="106.0" layoutY="185.0" prefHeight="162.0" prefWidth="324.0" text="Label" />
+      <Label fx:id="playerInfo" layoutX="63.0" layoutY="134.0" prefHeight="325.0" prefWidth="467.0" text="player Info" />
    </children>
 </AnchorPane>

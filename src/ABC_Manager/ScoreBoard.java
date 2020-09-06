@@ -57,7 +57,7 @@ public class ScoreBoard {
 
     public void printPlayer(int teamNo) {
         for(int count = 0; count < 2; count++) {
-            System.out.println(count + " : " + teams[teamNo].players[count].getPlayer_name());
+            System.out.println(teams[teamNo].players[count].getPlayer_id() + " : " + teams[teamNo].players[count].getPlayer_name());
         }
     }
 
