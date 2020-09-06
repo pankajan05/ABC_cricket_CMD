@@ -13,7 +13,7 @@ public class HighRun_Calculator implements Calculator {
     }
 
     @Override
-    public void calculate() {
+    public String calculate() {
         for(int team_counter = 0; team_counter < 2; team_counter++){
             for(int player_counter = 0; player_counter < 2; player_counter++){
                 int runs = 0;
@@ -28,5 +28,7 @@ public class HighRun_Calculator implements Calculator {
                 }
             }
         }
+        return Integer.toString(this.HighRuns) + " got by " + this.player.getPlayer_name();
     }
+
 }

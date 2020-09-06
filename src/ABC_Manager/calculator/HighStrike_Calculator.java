@@ -14,7 +14,7 @@ public class HighStrike_Calculator implements Calculator{
     }
 
     @Override
-    public void calculate() {
+    public String calculate() {
         for(int team_counter = 0; team_counter < 2; team_counter++){
             for(int player_counter = 0; player_counter < 2; player_counter++){
                 float strike = (float) 0.0;
@@ -30,5 +30,6 @@ public class HighStrike_Calculator implements Calculator{
                 }
             }
         }
+        return Float.toString(this.high_strike) + " happen - > " + this.Venue;
     }
 }
