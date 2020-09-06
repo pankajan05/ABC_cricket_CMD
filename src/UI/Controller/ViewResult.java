@@ -23,20 +23,18 @@ public class ViewResult implements Initializable {
     @FXML
     private Label strike;
 
-    private Team[] teams = new Team[2];
     private Serializer serializer = new Serializer();
-    private Calculator calculator;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.teams = this.serializer.deserialization();
-        this.calculator = new HighRun_Calculator(this.teams);
-        this.runs.setText(this.calculator.calculate());
+        Team[] teams = this.serializer.deserialization();
+        Calculator calculator = new HighRun_Calculator(teams);
+        this.runs.setText(calculator.calculate());
 
-        this.calculator = new HighBoundaries_Calculator(this.teams);
-        this.boundary.setText(this.calculator.calculate());
+        calculator = new HighBoundaries_Calculator(teams);
+        this.boundary.setText(calculator.calculate());
 
-        this.calculator = new HighStrike_Calculator(this.teams);
-        this.strike.setText(this.calculator.calculate());
+        calculator = new HighStrike_Calculator(teams);
+        this.strike.setText(calculator.calculate());
     }
 }

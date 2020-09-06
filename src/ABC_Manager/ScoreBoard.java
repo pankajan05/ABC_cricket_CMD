@@ -16,15 +16,22 @@ public class ScoreBoard {
     }
 
     public Team[] countScore() {
-        this.select_venue();
-        this.selectTeam();
-        System.out.println("Now playing team are "+ teams[team1].getTeam_name()+" and " + teams[team2].getTeam_name());
+        System.out.println("Score Counting is started.");
+        int i;
 
-        System.out.println("It is start to count the score of team1.\n\n");
-        this.record(team1);
-        this.record(team2);
+        do {
+            System.out.println("Enter any number to continue -1 to stop counting score : ");
+            i = input.nextInt();
+            this.select_venue();
+            this.selectTeam();
+            System.out.println("Now playing team are " + teams[team1].getTeam_name() + " and " + teams[team2].getTeam_name());
 
-        this.calculate_winner();
+            System.out.println("It is start to count the score of team1.\n\n");
+            this.record(team1);
+            this.record(team2);
+
+            this.calculate_winner();
+        }while(i != -1);
 
         return this.teams;
     }

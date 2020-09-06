@@ -30,6 +30,6 @@ public class HighStrike_Calculator implements Calculator{
                 }
             }
         }
-        return Float.toString(this.high_strike) + " happen - > " + this.Venue;
+        return Float.toString(this.high_strike) + " happen - > " + this.Venue + " by " + player.getPlayer_name();
     }
 }
