@@ -73,13 +73,12 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return "ABC_Manager.Player{" +
+        return "Player{" +
                 "player_id=" + player_id +
                 ", player_name='" + player_name + '\'' +
                 ", age=" + age +
-                ", role='" + role + '\'' +
-                ", playmatch=" + playmatch +
-                ", scoreCards=" + Arrays.toString(scoreCards) +
+                ", role='" + role + "'\n" +
+                 Arrays.toString(scoreCards) +
                 '}';
     }
 }

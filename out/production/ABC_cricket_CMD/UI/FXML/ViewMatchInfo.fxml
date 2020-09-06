@@ -3,9 +3,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.ViewMatchInfo">
    <children>
-      <Label fx:id="matchInfo" layoutX="84.0" layoutY="118.0" prefHeight="251.0" prefWidth="410.0" text="Label" />
+      <Label fx:id="matchInfo" layoutX="28.0" layoutY="63.0" prefHeight="392.0" prefWidth="542.0" text="Label" />
    </children>
 </AnchorPane>

@@ -22,9 +22,9 @@ public class ViewTeam {
 
     @FXML
     void search(MouseEvent event) {
-        String id = teamId.getText();
+        String id = this.teamId.getText();
         String text = "No Player is found";
-        playerNames.setText("helllo");
+        this.playerNames.setText(text);
         this.teams = serializer.deserialization();
         for(int counter = 0; counter < 2; counter++){
             if(this.teams[counter].getTeam_name().equals(id) ){
