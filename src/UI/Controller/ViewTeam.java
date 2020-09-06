@@ -23,11 +23,15 @@ public class ViewTeam {
     @FXML
     void search(MouseEvent event) {
         String id = teamId.getText();
+        String text = "No Player is found";
+        playerNames.setText("helllo");
         this.teams = serializer.deserialization();
-        System.out.print(this.teams[1]);
         for(int counter = 0; counter < 2; counter++){
-            if(this.teams[counter].getTeam_name() == id){
-                playerNames.setText(this.teams[counter].getPlayers().toString());
+            if(this.teams[counter].getTeam_name().equals(id) ){
+                text = "";
+                for(int counter_p = 0; counter_p<2; counter_p++)
+                    text += this.teams[counter].players[counter_p].getPlayer_name() + " -> " + this.teams[counter].players[counter_p].getRole() + "\n";
+                this.playerNames.setText(text);
             }
         }
 

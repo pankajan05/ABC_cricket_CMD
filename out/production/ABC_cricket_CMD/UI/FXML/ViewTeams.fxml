@@ -10,6 +10,6 @@
       <Label layoutX="120.0" layoutY="97.0" text="TeamId" />
       <TextField fx:id="teamId" layoutX="66.0" layoutY="56.0" />
       <Button fx:id="search" layoutX="390.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#search" text="Seach" />
-      <Label fx:id="playerNames" layoutX="66.0" layoutY="174.0" prefHeight="114.0" prefWidth="395.0" text="Label" />
+      <Label fx:id="playerNames" layoutX="66.0" layoutY="174.0" prefHeight="114.0" prefWidth="395.0" text="Please Enter the Team Name to View the Team Player" />
    </children>
 </AnchorPane>
