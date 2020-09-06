@@ -12,13 +12,14 @@ public class ABC_Manager {
     public void manage() {
         //Register register = new Register(this.teams);
         //this.teams = register.register();
-
-        //ScoreBoard scoreBoard = new ScoreBoard(this.teams);
-        //this.teams = scoreBoard.countScore();
+        //serializer.serialization(teams);
 
         this.teams = serializer.deserialization();
+        ScoreBoard scoreBoard = new ScoreBoard(this.teams);
+        this.teams = scoreBoard.countScore();
 
-        System.out.println(teams[0]);
+
+
         //serializer.serialization(teams);
 
         Calculator calculator;

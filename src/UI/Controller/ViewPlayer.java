@@ -20,7 +20,7 @@ public class ViewPlayer {
 
     @FXML
     private Label playerInfo;
-    private Team[] teams = new Team[2];
+    private Team[] teams = new Team[10];
     private Serializer serializer = new Serializer();
 
     @FXML
@@ -31,9 +31,9 @@ public class ViewPlayer {
         this.playerInfo.setText(text);
 
         this.teams = serializer.deserialization();
-        for(int counter = 0; counter < 2; counter++){
+        for(int counter = 0; counter < teams.length; counter++){
             if(this.teams[counter].getTeam_name().equals(t_id) ){
-                for(int counter_p = 0; counter_p<2; counter_p++)
+                for(int counter_p = 0; counter_p< teams[counter].players.length; counter_p++)
                     if(Integer.parseInt(p_id) == this.teams[counter].players[counter_p].getPlayer_id()) {
                         text = "";
                         text += this.teams[counter].players[counter_p] ;

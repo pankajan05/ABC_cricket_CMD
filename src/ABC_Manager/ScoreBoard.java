@@ -16,29 +16,38 @@ public class ScoreBoard {
     }
 
     public Team[] countScore() {
-        this.select_venue();
-        this.selectTeam();
-        System.out.println("Now playing team are "+ teams[team1].getTeam_name()+" and " + teams[team2].getTeam_name());
+        System.out.println("Score Counting is started.");
+        int i;
 
-        System.out.println("It is start to count the score of team1.\n\n");
-        this.record(team1);
-        this.record(team2);
+        do {
 
-        this.calculate_winner();
+            this.select_venue();
+            this.selectTeam();
+            System.out.println("Now playing team are " + teams[team1].getTeam_name() + " and " + teams[team2].getTeam_name());
 
+            System.out.println("It is start to count the score of team1.\n\n");
+            this.record(team1);
+            this.record(team2);
+
+            this.calculate_winner();
+
+            System.out.println("Enter any number to continue -1 to stop counting score : ");
+            i = input.nextInt();
+
+        }while(i != -1);
         return this.teams;
     }
 
     public void selectTeam(){
         System.out.println("please select 2 teams that play the match "+ venue +": ");
-        for(int x = 0; x < 2; x++){
+        for(int x = 0; x < teams.length; x++){
             System.out.println(x + " : " + teams[x].getTeam_name());
         }
         System.out.print("Enter 1st play team ");
         do {
             System.out.print("correct no ? : ");
             team1 = input.nextInt();
-        }while (team1 < 0 || team1 > 9);
+        }while (team1 < 0 || team1 > teams.length);
 
         System.out.print("Enter 2nd team ");
 
@@ -46,7 +55,7 @@ public class ScoreBoard {
         do {
             System.out.print("correct no ? : ");
             team2 = input.nextInt();
-        }while (team2 < 0 || team2 > 9);
+        }while (team2 < 0 || team2 > teams.length);
 
     }
 
@@ -56,8 +65,8 @@ public class ScoreBoard {
     }
 
     public void printPlayer(int teamNo) {
-        for(int count = 0; count < 2; count++) {
-            System.out.println(teams[teamNo].players[count].getPlayer_id() + " : " + teams[teamNo].players[count].getPlayer_name());
+        for(int count = 0; count < 11; count++) {
+            System.out.println(count + " : " + teams[teamNo].players[count].getPlayer_name());
         }
     }
 
@@ -65,7 +74,7 @@ public class ScoreBoard {
         int selected_player;
         System.out.println("Enter -1 when team finish playing.\n Select the player no");
 
-        for(int count = 0; count < 2; count++){
+        for(int count = 0; count < 11; count++){
             this.printPlayer(teamNo);
             System.out.print("Enter the selected ");
 
